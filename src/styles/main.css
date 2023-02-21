@@ -18,7 +18,7 @@ header, #order-info {
     font-weight: bold;
 }
 
-#clean-button {
+#clean-button, #add-button{
     border-style: none;
     border-radius: 20px;
     background-color: #1687a7;
@@ -26,13 +26,22 @@ header, #order-info {
     padding: 5px 10px;
     transition: opacity 0.15s;
     font-weight: bold;
+    cursor: pointer;
 }
 
-#clean-button:hover {
+#add-button {padding:5px 10px;}
+
+#clean-button:hover, #add-button:hover {
     opacity: 0.5;
 }
 
+#wrapper > div:first-child {
+    width: 10%;
+    display: inline-block;
+}
+
+
 #order-list-wrapper {
-    display: flex;
+    display: inline-flex;
     flex-flow: column-reverse;
 }
