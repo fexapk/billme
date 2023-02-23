@@ -16,9 +16,10 @@ header, #order-info {
     flex: 14%;
     font-size: smaller;
     font-weight: bold;
+    justify-content: space-between;
 }
 
-#clean-button, #add-button{
+#clean-button, #add-button, .delete-button {
     border-style: none;
     border-radius: 20px;
     background-color: #1687a7;
@@ -30,13 +31,14 @@ header, #order-info {
 }
 
 #add-button {padding:5px 10px;}
+.delete-button {margin-left: 200px;}
 
-#clean-button:hover, #add-button:hover {
+#clean-button:hover, #add-button:hover, .delete-button:hover {
     opacity: 0.5;
 }
 
 #wrapper > div:first-child {
-    width: 10%;
+    width: 9%;
     display: inline-block;
 }
 
@@ -45,3 +47,26 @@ header, #order-info {
     display: inline-flex;
     flex-flow: column-reverse;
 }
+
+.order {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.order > input, select {
+    width: 20%;
+    margin-left: 80px;
+}
+
+output {
+    border: 1px solid black;
+    background-color: #e9e4e6;
+    width: 12%;
+    margin-left: 150px;
+}
+
+
+
+
