@@ -2,7 +2,6 @@ div {
     border: 1px solid black;
 }
 
-
 body {
     background-color: #f6f5f5;
     font-family: sans-serif;
@@ -16,20 +15,59 @@ header {
     align-items: center;
 }
 
-#clean-button {
+#clean-button, .add-button {
     border-style: none;
     border-radius: 20px;
     background-color: #1687a7;
     color: #f6f5f5;
-    padding: 10px 10px;
+    padding: 5px 8px;
     transition: opacity 0.15s;
     font-weight: bold;
     cursor: pointer;
+    text-align: center;
+    line-height: 20px;
 }
 
-#add-button {padding:5px 10px;}
-.delete-button {margin-left: 200px;}
+.add-button {
+    line-height: 15px;
+}
 
-#clean-button:hover {
+#clean-button:hover, .add-button:hover {
     opacity: 0.5;
 }
+
+#order-info, .order {
+    display: flex;
+    flex-flow: row;
+}
+
+#order-info > div {
+    text-align: center;
+    font-weight: bold;
+    flex: 14%;
+
+}
+
+#order-list-wrapper {
+    display: flex;
+    flex-flow: column-reverse;
+}
+
+.order > div {
+    flex: 0 1 14%;
+    text-align: center;
+    padding:  2px 2px;
+}
+ 
+.order > div > input, .order select {
+    width: 80%;
+    min-width: 0;
+    background-color: #f6f5f5;
+    border-style: solid;
+}
+
+
+
+
+
+
