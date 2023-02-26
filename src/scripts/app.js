@@ -25,8 +25,7 @@
     }
 
     const orderHtml = 
-        `<div class="order">
-        <div>
+        `<div>
             <button class="add-button">+</button>
         </div>
         <div>
@@ -52,6 +51,5 @@
         </div>
         <div>
             <button class="delete-button">delete</button>
-        </div>
-    </div>`;
+        </div>`;
 })();
