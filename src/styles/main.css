@@ -15,24 +15,25 @@ header {
     align-items: center;
 }
 
-#clean-button, .add-button {
+#clean-button, .add-button, .delete-button {
     border-style: none;
     border-radius: 20px;
     background-color: #1687a7;
     color: #f6f5f5;
-    padding: 5px 8px;
+    padding: 8px 8px;
     transition: opacity 0.15s;
-    font-weight: bold;
     cursor: pointer;
     text-align: center;
-    line-height: 20px;
+    line-height: 8px;
 }
 
 .add-button {
-    line-height: 15px;
+    line-height: 14px;
+    padding: 4px 40px;
+    font-weight: bolder;
 }
 
-#clean-button:hover, .add-button:hover {
+#clean-button:hover, .add-button:hover, .delete-button:hover {
     opacity: 0.5;
 }
 
@@ -57,6 +58,7 @@ header {
     flex: 0 1 14%;
     text-align: center;
     padding:  2px 2px;
+    vertical-align: middle;
 }
  
 .order > div > input, .order select {
@@ -64,6 +66,11 @@ header {
     min-width: 0;
     background-color: #f6f5f5;
     border-style: solid;
+}
+
+.order output {
+    border: 1px solid #e3e3e3;
+    width: 80%;
 }
 
 
