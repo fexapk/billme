@@ -6,6 +6,7 @@
         const cleanButton = document.querySelector('#clean-button');
         const mainWrapper = document.querySelector('#main-wrapper');
         const orderListWrapper = document.querySelector('#order-list-wrapper');
+        const headerInputs = document.querySelector('header').querySelectorAll('input');
 
         mainWrapper.style.visibility = 'hidden';
 
@@ -19,6 +20,7 @@
                 cleanButton.innerText = 'create';
                 mainWrapper.style.visibility = 'hidden';
                 orderListWrapper.textContent = '';
+                headerInputs.forEach(input => input.value = null);
             }
         });
     }

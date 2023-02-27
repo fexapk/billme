@@ -1,6 +1,3 @@
-div {
-    border: 1px solid black;
-}
 
 body {
     background-color: #f6f5f5;
@@ -15,7 +12,10 @@ header {
     align-items: center;
 }
 
-#clean-button, .add-button, .delete-button {
+#clean-button, 
+#bill, 
+.add-button, 
+.delete-button {
     border-style: none;
     border-radius: 20px;
     background-color: #1687a7;
@@ -33,7 +33,10 @@ header {
     font-weight: bolder;
 }
 
-#clean-button:hover, .add-button:hover, .delete-button:hover {
+#clean-button:hover, 
+#bill:hover,
+.add-button:hover, 
+.delete-button:hover {
     opacity: 0.5;
 }
 
@@ -52,6 +55,12 @@ header {
 #order-list-wrapper {
     display: flex;
     flex-flow: column-reverse;
+}
+
+.order {
+    margin-bottom: 10px;
+    border: 1px solid #e3e3e3;
+    border-radius: 20px;
 }
 
 .order > div {
