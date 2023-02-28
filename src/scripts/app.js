@@ -119,10 +119,10 @@ function showBill() {
         let twentyOneIvaTotal = 0;
 
         orderList.forEach(order => {
+            
             const iva = Number(order.querySelector('select').value);
             const total = Number(order.querySelector('output').innerText);
-            console.log(total);
-            console.log(iva)
+
             switch (iva) {
                 case 0.04:
                     fourIvaTotal += getIvaFromTotal(total, iva);
@@ -142,11 +142,9 @@ function showBill() {
             return total - total / (1 + iva);
         }
 
-        console.log(fourIvaTotal + " " + tenIvaTotal + " " + twentyOneIvaTotal);
-
-        document.querySelector('#total-21').innerText = twentyOneIvaTotal.toFixed();
-        document.querySelector('#total-10').innerText = tenIvaTotal.toFixed();
-        document.querySelector('#total-4').innerText = fourIvaTotal.toFixed();
+        document.querySelector('#total-21').innerText = twentyOneIvaTotal.toFixed(2);
+        document.querySelector('#total-10').innerText = tenIvaTotal.toFixed(2);
+        document.querySelector('#total-4').innerText = fourIvaTotal.toFixed(2);
     }
     
 }
