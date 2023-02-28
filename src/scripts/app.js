@@ -144,9 +144,9 @@ function showBill() {
 
         console.log(fourIvaTotal + " " + tenIvaTotal + " " + twentyOneIvaTotal);
 
-        document.querySelector('#total-21').innerText = twentyOneIvaTotal;
-        document.querySelector('#total-10').innerText = tenIvaTotal;
-        document.querySelector('#total-4').innerText = fourIvaTotal;
+        document.querySelector('#total-21').innerText = twentyOneIvaTotal.toFixed();
+        document.querySelector('#total-10').innerText = tenIvaTotal.toFixed();
+        document.querySelector('#total-4').innerText = fourIvaTotal.toFixed();
     }
     
 }
