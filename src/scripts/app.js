@@ -21,6 +21,7 @@
                 mainWrapper.style.visibility = 'hidden';
                 orderListWrapper.textContent = '';
                 headerInputs.forEach(input => input.value = null);
+                resetTotalBill();
             }
         });
     }
@@ -102,3 +103,53 @@
             <button class="delete-button">delete</button>
         </div>`;
 })();
+
+function showBill() {
+    const orderList = document.querySelectorAll('.order');
+    
+    if (orderList.length == 0) {
+        alert('Can not show total of the bill if there is no order');
+    } 
+    else {
+
+        document.querySelector('#total-output').style.visibility = 'visible';
+
+        let fourIvaTotal = 0;
+        let tenIvaTotal = 0;
+        let twentyOneIvaTotal = 0;
+
+        orderList.forEach(order => {
+            const ivaValue = order.querySelector('select').value;
+            const output = order.querySelector('output');
+
+            switch (ivaValue) {
+                case '0.04':
+                    fourIvaTotal += Number(output.innerText);
+                    break;
+                case '0.1':
+                    tenIvaTotal += Number(output.innerText);
+                    break;
+                case '0.21':
+                    twentyOneIvaTotal += Number(output.innerText);
+                    break;
+                default:
+                    break;
+            }
+        });
+
+        console.log(fourIvaTotal + " " + tenIvaTotal + " " + twentyOneIvaTotal);
+
+        document.querySelector('#total-21').innerText = twentyOneIvaTotal;
+        document.querySelector('#total-10').innerText = tenIvaTotal;
+        document.querySelector('#total-4').innerText = fourIvaTotal;
+    }
+    
+}
+
+function resetTotalBill() {
+    const totalBillOutput = document.querySelector('#total-output');
+    totalBillOutput.style.visibility = 'hidden';
+    totalBillOutput
+        .querySelectorAll('span')
+        .forEach(span => span.innerText = '');
+}

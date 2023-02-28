@@ -82,6 +82,28 @@ header {
     width: 80%;
 }
 
+footer {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#total-output {
+    visibility: hidden;
+}
+
+#total-output ul > li {
+    display: inline-block;
+    margin-right: 100px;
+}
+
+#total-output span {
+    margin-left: 20px;
+    font-weight: bolder; 
+}
+
+
 
 
 
